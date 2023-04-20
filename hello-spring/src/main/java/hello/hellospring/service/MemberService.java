@@ -2,24 +2,14 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-/** @Service
- * 스프링 컨테이너에 등록시켜줌
- */
-@Service
 public class MemberService {    // 리포지토리와 도메인을 활용해서 실제 비즈니스 로직을 작성
 
     private final MemberRepository memberRepository;
 
-    /** @Autowired
-     * 의존 관계 주입
-     */
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
